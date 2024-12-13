@@ -64,6 +64,9 @@
     ]
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\java\sky-take-out\sky-server" />
@@ -108,7 +111,8 @@
       <workItem from="1734008099847" duration="3310000" />
       <workItem from="1734072057917" duration="2861000" />
       <workItem from="1734080569882" duration="4053000" />
-      <workItem from="1734090679268" duration="2099000" />
+      <workItem from="1734090679268" duration="3044000" />
+      <workItem from="1734099395359" duration="2436000" />
     </task>
     <servers />
   </component>

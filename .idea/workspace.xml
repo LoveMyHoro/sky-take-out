@@ -49,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.SkyApplication.executor": "Run",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/java/4.SSM",
+    "last_opened_file_path": "D:/java/sky-take-out/sky-server/src/main/resources/mapper",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,6 +114,7 @@
       <workItem from="1734090679268" duration="3044000" />
       <workItem from="1734099395359" duration="2436000" />
       <workItem from="1734161507496" duration="5249000" />
+      <workItem from="1734167800734" duration="919000" />
     </task>
     <servers />
   </component>

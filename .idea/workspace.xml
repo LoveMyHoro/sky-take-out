@@ -13,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -34,6 +35,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2q4U9UszgfSxkrFB2a0wX2xdjIf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.SkyApplication.executor": "Run",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/java/sky-take-out/sky-server/src/main/resources/mapper",
+    "last_opened_file_path": "D:/java/4.SSM/code/ssm-spring-part",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,10 +73,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\java\sky-take-out\sky-server" />
-      <recent name="D:\java\sky-take-out" />
-      <recent name="D:\java\sky-take-out\sky-pojo" />
-      <recent name="D:\java\sky-take-out\sky-common" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\controller\admin" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\service\impl" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\service" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\resources\mapper" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\mapper" />
     </key>
   </component>
   <component name="RunManager">
@@ -114,7 +119,8 @@
       <workItem from="1734090679268" duration="3044000" />
       <workItem from="1734099395359" duration="2436000" />
       <workItem from="1734161507496" duration="5249000" />
-      <workItem from="1734167800734" duration="919000" />
+      <workItem from="1734167800734" duration="1348000" />
+      <workItem from="1734174662669" duration="6264000" />
     </task>
     <servers />
   </component>

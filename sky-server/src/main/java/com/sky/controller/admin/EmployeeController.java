@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -75,6 +76,7 @@ public class EmployeeController {
      * @return
      */
     @PostMapping("/logout")
+    @ApiOperation("退出登录")
     public Result<String> logout() {
         return Result.success();
     }
@@ -114,6 +116,31 @@ public class EmployeeController {
     public Result startOrStop(@PathVariable Integer status,long id){
         log.info("启用/禁用员工账号,{},{}", status, id);
         employeeService.startOrStop(status,id);
+        return Result.success();
+    }
+
+    /**
+     * 6.根据id查询员工详情
+     * @param id
+     * @return
+     */
+    @GetMapping("{id}")
+    @ApiOperation("根据id查询员工详情")
+    public Result<Employee> getById(@PathVariable Long id) {
+        Employee employee=employeeService.getById(id);
+        return Result.success(employee);
+    }
+
+    /**
+     * 7.编辑员工信息
+     * @param employeeDTO
+     * @return
+     */
+    @PutMapping
+    @ApiOperation("编辑员工信息")
+    public Result update(@RequestBody EmployeeDTO employeeDTO) {
+        log.info("编辑员工信息");
+        employeeService.update(employeeDTO);
         return Result.success();
     }
 

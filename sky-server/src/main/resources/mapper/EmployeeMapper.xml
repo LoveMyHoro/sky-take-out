@@ -11,6 +11,14 @@
         </where>
         order by create_time desc
     </select>
+    <select id="getById" resultType="com.sky.entity.Employee">
+        select * from employee
+        <where>
+            <if test="id!=null">
+                id=#{id}
+            </if>
+        </where>
+    </select>
     <update id="update">
         update employee
         <set>

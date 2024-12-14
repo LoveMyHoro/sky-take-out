@@ -6,6 +6,8 @@ import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.entity.Employee;
 import com.sky.result.PageResult;
 
+import java.util.List;
+
 public interface EmployeeService {
 
     /**
@@ -20,4 +22,8 @@ public interface EmployeeService {
 	PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
 	void startOrStop(Integer status, long id);
+
+	Employee getById(Long id);
+
+	void update(EmployeeDTO employeeDTO);
 }

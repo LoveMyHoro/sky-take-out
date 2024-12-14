@@ -15,6 +15,7 @@ import io.lettuce.core.cluster.pubsub.api.async.PubSubAsyncNodeSelection;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,6 +103,18 @@ public class EmployeeController {
         log.info("员工列表查询，参数为{}", employeePageQueryDTO);
         PageResult pageResult=employeeService.pageQuery(employeePageQueryDTO);
         return Result.success(pageResult);
+    }
+
+    /**
+     * 5.启用/禁用员工账号
+     * @return
+     */
+    @PostMapping("/status/{status}")
+    @ApiOperation("启用/禁用员工账号")
+    public Result startOrStop(@PathVariable Integer status,long id){
+        log.info("启用/禁用员工账号,{},{}", status, id);
+        employeeService.startOrStop(status,id);
+        return Result.success();
     }
 
 }

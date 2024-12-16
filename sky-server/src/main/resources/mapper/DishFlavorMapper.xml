@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace等于mapper接口类的全限定名,这样实现对应 -->
+<!--全限定名就是完整地址-->
+<mapper namespace="com.sky.mapper.DishFlavorMapper">
+
+    <insert id="insertBath">
+        insert into dish_flavor(dish_id,name,value) values
+        <foreach collection="flavors" item="fv" separator=",">
+            (#{fv.dishId},#{fv.name},#{fv.value})
+        </foreach>
+    </insert>
+</mapper>

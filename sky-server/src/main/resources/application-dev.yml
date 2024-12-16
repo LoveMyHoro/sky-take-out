@@ -6,3 +6,9 @@ sky:
     database: sky_take_out
     username: daifuyang
     password: 123456
+  alioss:
+      endpoint: 111
+      access-key-id: 1111
+      access-key-secret: 1111
+      bucket-name: horo-event
+

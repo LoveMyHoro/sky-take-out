@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ba8f42f-2e48-4741-ad7e-22fb378c971b" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/config/WebMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/SetMealDishMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/SetMealDishMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/SetmealMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/SetmealMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/DishService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/SetmealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/SetmealService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/DishServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/SetmealServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/SetmealServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/SetMealDishMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/SetMealDishMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/SetmealMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/SetmealMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/SetmealController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/SetmealController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Interface" />
+        <option value="application.yaml" />
         <option value="mapper" />
       </list>
     </option>
@@ -66,9 +60,9 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.SkyApplication.executor": "Debug",
+    "Spring Boot.SkyApplication.executor": "Run",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/java/6.2.苍穹外卖资料/资料/day07/springcache-demo",
+    "last_opened_file_path": "D:/java/sky-take-out/sky-server/src/main/java/com/sky/service/impl",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,9 +85,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\controller\user" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\service\impl" />
       <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\service" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\mapper" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\controller\user" />
       <recent name="D:\java\6.2.苍穹外卖资料\资料\day01\后端初始工程\sky-take-out\sky-server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java\sky-take-out\sky-server\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,6 +133,10 @@
       <workItem from="1735142166995" duration="1497000" />
       <workItem from="1735210246156" duration="2458000" />
       <workItem from="1735217253970" duration="4170000" />
+      <workItem from="1735258016998" duration="595000" />
+      <workItem from="1735260742514" duration="623000" />
+      <workItem from="1735281490169" duration="10229000" />
+      <workItem from="1735303826740" duration="1958000" />
     </task>
     <servers />
   </component>

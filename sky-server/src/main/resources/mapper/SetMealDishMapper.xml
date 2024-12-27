@@ -12,6 +12,15 @@
             #{dishId}
         </foreach>
     </select>
+    <select id="getSetmealIdsByDishIds" resultType="java.lang.Long">
+        select distinct sm.id as setmeal_id
+        from setmeal sm
+        join setmeal_dish sd on sm.id = sd.setmeal_id
+        where sd.dish_id in
+        <foreach collection="dishIds" item="dishId" separator="," open="(" close=")">
+            #{dishId}
+        </foreach>
+    </select>
     <insert id="insertBatch" parameterType="list">
         insert into setmeal_dish
         (setmeal_id,dish_id,name,price,copies)

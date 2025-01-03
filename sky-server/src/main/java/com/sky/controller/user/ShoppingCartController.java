@@ -32,16 +32,32 @@ public class ShoppingCartController {
 		shoppingCartService.addShoppingCart(shoppingCartDTO);
 		return Result.success();
 	}
+
+	/**
+	 * 展示购物车
+	 * @return
+	 */
 	@GetMapping("/list")
 	public Result list(){
 		List<ShoppingCart> list=shoppingCartService.showShoppingCart();
 		return Result.success(list);
 	}
+
+	/**
+	 * 清空购物车
+	 * @return
+	 */
 	@DeleteMapping("/clean")
 	public Result clear(){
 		shoppingCartService.clearShoppingCart();
 		return Result.success();
 	}
+
+	/**
+	 * 减少购物车中某件商品的数量
+	 * @param shoppingCartDTO
+	 * @return
+	 */
 	@PostMapping("/sub")
 	public Result sub(@RequestBody ShoppingCartDTO shoppingCartDTO){
 		log.info("删除购物车中的一个物品");

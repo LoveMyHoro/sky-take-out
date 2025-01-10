@@ -3,6 +3,7 @@ package com.sky.controller.admin;
 import com.sky.result.Result;
 import com.sky.service.ReportService;
 import com.sky.vo.TurnoverReportVO;
+import com.sky.vo.UserReportVO;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,25 @@ public class ReportController {
 		TurnoverReportVO turnoverStatistics = reportService.getTurnoverStatistics(begin, end);
 		log.info("返回的日期列表为：{}", turnoverStatistics.getDateList());
 		return Result.success(turnoverStatistics);
+	}
+
+	/**
+	 * 查询员工总数和新员工数目
+	 * @param begin
+	 * @param end
+	 * @return
+	 */
+	@GetMapping("/userStatistics")
+	public Result<UserReportVO>userStatics(
+			@DateTimeFormat(pattern = "yyyy-MM-dd")
+			LocalDate begin,
+			@DateTimeFormat(pattern = "yyyy-MM-dd")
+			LocalDate end){
+		log.info("查询的日期为：{}到{}",begin,end);
+		UserReportVO userStatics=reportService.getUserStatistics(begin, end);
+		log.info("员工总数：{}", userStatics.getTotalUserList());
+		log.info("新员工总数：{}",userStatics.getNewUserList());
+		return Result.success(userStatics);
 	}
 
 }

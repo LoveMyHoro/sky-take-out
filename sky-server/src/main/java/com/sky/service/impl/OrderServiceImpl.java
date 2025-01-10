@@ -14,6 +14,7 @@ import com.sky.result.PageResult;
 import com.sky.service.OrderService;
 import com.sky.utils.WeChatPayUtil;
 import com.sky.vo.*;
+import com.sky.websocket.WebSocketServer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -50,6 +53,8 @@ public class OrderServiceImpl implements OrderService {
 	private UserMapper userMapper;
 	@Autowired
 	private WeChatPayUtil weChatPayUtil;
+	@Autowired
+	private WebSocketServer webSocketServer;
 
 	/**
 	 * 1.提交订单
@@ -150,6 +155,13 @@ public class OrderServiceImpl implements OrderService {
 				.build();
 
 		orderMapper.update(orders);
+		//通过websocket向客户端推送消息 type,orderId,content
+		Map map=new HashMap();
+		map.put("type",1);
+		map.put("orderId",orders.getId());
+		map.put("content","订单号："+outTradeNo);
+		String json=JSONObject.toJSONString(map);
+		webSocketServer.sendToAllClient(json);
 	}
 
 	@Override
@@ -380,6 +392,22 @@ public class OrderServiceImpl implements OrderService {
 		ordersDB.setStatus(Orders.COMPLETED);
 		ordersDB.setDeliveryTime(LocalDateTime.now());
 		orderMapper.update(ordersDB);
+	}
+
+	@Override
+	public void reminder(Long id) {
+		//检查订单是否存在
+		Orders ordersDB=orderMapper.getById(id);
+		if(ordersDB==null){
+			throw new OrderBusinessException(MessageConstant.ORDER_STATUS_ERROR);
+		}
+		//向管理端传递消息
+		Map map=new HashMap();
+		map.put("type",2);
+		map.put("orderId",id);
+		map.put("content","订单号："+ordersDB.getNumber());
+		String json=JSONObject.toJSONString(map);
+		webSocketServer.sendToAllClient(json);
 	}
 
 

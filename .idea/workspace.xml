@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ba8f42f-2e48-4741-ad7e-22fb378c971b" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/sky-pojo/src/main/java/com/sky/dto/OrdersPageQueryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-pojo/src/main/java/com/sky/dto/OrdersPageQueryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-pojo/src/main/java/com/sky/vo/OrderStatisticsVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-pojo/src/main/java/com/sky/vo/OrderStatisticsVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/SkyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/user/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/OrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="application.yaml" />
-        <option value="Interface" />
         <option value="mapper" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,7 +64,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.SkyApplication.executor&quot;: &quot;Run&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/java/sky-take-out/sky-server/src/main/java/com/sky/controller&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/java/sky-take-out/sky-server/src/main/java/com/sky/controller/notify&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -73,7 +73,7 @@
     &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -90,11 +90,11 @@
       <recent name="com.sky.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\controller\notify" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\task" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\websocket" />
+      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\config" />
       <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\controller" />
-      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\service\impl" />
-      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\service" />
-      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\mapper" />
-      <recent name="D:\java\sky-take-out\sky-server\src\main\java\com\sky\controller\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\java\sky-take-out\sky-server\src\main\resources\mapper" />
@@ -160,6 +160,13 @@
       <workItem from="1735895591542" duration="2527000" />
       <workItem from="1735898137955" duration="1132000" />
       <workItem from="1735901877495" duration="8389000" />
+      <workItem from="1735998127675" duration="3848000" />
+      <workItem from="1736003202698" duration="343000" />
+      <workItem from="1736003555685" duration="425000" />
+      <workItem from="1736044533270" duration="5495000" />
+      <workItem from="1736085369249" duration="2144000" />
+      <workItem from="1736091143338" duration="1000" />
+      <workItem from="1736494169405" duration="4116000" />
     </task>
     <servers />
   </component>

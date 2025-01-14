@@ -26,5 +26,5 @@ public interface UserMapper {
 	@Select("select * from user where id=#{userId}")
 	User getById(Long userId);
 
-	Double sumByMap(Map map);
+	Integer sumByMap(Map map);
 }

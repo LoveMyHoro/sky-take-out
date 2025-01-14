@@ -13,7 +13,7 @@ public interface SetMealDishMapper {
 	 * 根据菜品名查询套餐id
 	 * @return
 	 */
-	List<Long> getSetMealIdByDishIds(List<Long>dishIds);
+	List<Long> getSetMealIdByDishIds(List<Long> dishIds);
 	/**
 	 * 批量保存套餐和菜品的关联关系
 	 * @param setmealDishes

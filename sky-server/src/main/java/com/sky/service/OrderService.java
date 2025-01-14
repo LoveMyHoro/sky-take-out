@@ -22,7 +22,7 @@ public interface OrderService {
 	 */
 	void paySuccess(String outTradeNo);
 
-	PageResult queryOrders(int pageNum,int pageSize,Integer status);
+	PageResult queryOrders(int pageNum, int pageSize, Integer status);
 
 
 	void cancelById(Long id) throws Exception;
